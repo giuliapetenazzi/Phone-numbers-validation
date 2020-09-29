@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script type="text/javascript" src="/js/script.js"></script>
+        <title>South-African mobile phone number validation</title>
+    </head>
+    <body onload="focusOnInput();">
+
+        <form action="/validatenumber" method="get" class="centerInPage">
+        <h1 class = "title">South-African mobile phone number validation</h1>
+        <div class="form-group">
+            <label>Single number validation</label>
+            <input type="text" class="form-control" name="phoneNumber" id="phoneNumber"
+              placeholder="Phone number"
+            />
+        </div>
+
+            <!-- Flash module, powerful way to quickly display little messages -->
+            <% if (message.length) { %>
+                <% var msg = message[0]; %>
+                <% if (msg.result === "correct") { %>
+                <%   var color = "alert alert-success"; %>
+                <%   var text = 'Phone number ' + msg.number + ' is valid!'; %>
+                <% } else if (msg.result === "corrected") { %>
+                <%   var color = "alert alert-warning"; %>
+                <%   var text = 'Phone number ' + msg.number + ' is almost valid, maybe you mean ' + msg.correctedNumber + '?'; %>
+                <% } else if (msg.result === "wrong") { %>
+                <%   var color = "alert alert-danger"; %>
+                <%   var text = 'Phone number ' + msg.number + ' is not valid. ' + msg.cause + '.'; %>
+                <% } %>
+                <div class="<%= color %>" >
+                <%= text %>
+                </div>
+            <% } %>
+
+         <button
+           id = "singleValidationBtn"
+           class="btn btn-primary single"
+           type="submit"
+         >Validate</button>
+        </form>
+        
+        <div class="centerInPage">
+            <button
+            id = "validateFromCSV"
+            onclick="validateFromCSV()"
+            class="btn btn-secondary multiple"
+            >Validate numbers from CSV</button>
+        </div>
+        <div id="results"></div>
+    </body>
+</html>

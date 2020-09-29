@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", "Helvetica", Helvetica, sans-serif;
+  background: #eee;
+  color: #333;
+}
+
+.title {
+    font-size: 24pt;
+    margin-bottom: 100px;
+}
+
+/* ============= form ================== */
+.centerInPage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 5% 0%;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+}
+
+.centerInPage input, .centerInPage button {
+  margin: 20px 0px;
+}
+
+.centerInPage button.single {
+    width: 40%;
+}
+
+.centerInPage input, .centerInPage button{
+  width: 100%;
+}
+
+/* ============= results ================== */
+#results {
+    margin: auto;
+    width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 1240px;
+}
+
+.resultsTable{
+    margin: 2em;
+     overflow: auto;
+    flex:1;
+    background-color: #eee;
+    border-radius: 5px;
+    /*padding: 10px 20px;*/
+    border: 30px solid #eee;
+    border-left: 30px solid #eee;
+}
+
+.resultsTable .th{
+    font-weight: 700;
+}
+
+.resultsTable .row{
+    width: 100%;
+}
+
+.tableTitle{
+    margin: 0em 1em;
+}
+
+#results h2 {
+    font-size: 16pt;
+}

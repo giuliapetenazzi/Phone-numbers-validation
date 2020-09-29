@@ -6,6 +6,7 @@ Il server node principalmente espone le API per la validazione e autocorrezione 
 
 
 Per l'installazione e l'avvio
+
 Prerequisito: avere Node installato (https://nodejs.org/en/) (versione utilizzata 12.18.4)
 ```
 npm install

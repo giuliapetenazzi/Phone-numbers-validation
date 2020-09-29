@@ -5,7 +5,7 @@ Progetto che tratta il tema della validazione di numeri di telefono sud-africani
 Il server node principalmente espone le API per la validazione e autocorrezione di singoli numeri inseriti dall'utente tramite web page e per la validazione e autocorrezione di una serie di numeri memorizzati su file csv nel server.
 
 
-Per l'installazione e l'avvio
+**Per l'installazione e l'avvio**
 
 Prerequisito: avere Node installato (https://nodejs.org/en/) (versione utilizzata 12.18.4)
 ```
